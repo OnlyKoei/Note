@@ -19,8 +19,8 @@ emsdk.bat update
 emsdk.bat install latest
 emsdk.bat activate latest
 设置环境变量执行：
-
 emsdk_env.bat
+
 ps： 安装及激活只需要执行一次；以后在新建的控制台中设置一次环境变量后，即可使用Emscripten核心命令emcc。在Windows环境下，如果想把Emscripten的环境变量注册为全局变量，可以以管理员身份运行emsdk.bat activate latest --global，该命令将更改系统的环境变量，使得以后无需再运行emsdk_env.bat，该方法有潜在的副作用：它将环境变量指向了Emscripten内置的Node.js、Python、Java，若系统中安装了这些组件的其他版本，可能引发冲突。比如原先配置的 JAVA_HOME 路径会指向 emsdk 路径下自带的 jdk,如果版本和原先配置的不一致，可能会影响其他程序的使用；
 
 3. 需要本地有安装 cmake 和 mingw, 安装完成后记得配置环境变量，即在 path 上添加相应路径，比如：
